@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Karaoke</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mystery+Quest&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="panelsup">
+			<div class="content">
+				<div class="info">
+					<h1 id="title"></h1>
+					<div>
+						<h2 id="artist"></h2>
+						<h3 id="album"></h3>
+					</div>
+				</div>
+
+				<audio id="audio-karaoke"></audio>
+				<div id="bar-container">
+					<div id="audio-progress"></div>
+				</div>
+				<div id="time">
+					<p id="current-time"></p>
+					<p id="time-left"></p>
+				</div>
+
+				<div class="controls">
+					<button class="btn" id="play-button">Play</button>
+					<button class="btn disabled" id="pause-button">Pause</button>
+					<button class="btn" id="stop-button">Stop</button>
+				</div>
+			</div>
+			<div class="img">
+				<img id="cover-image" alt="" />
+			</div>
+		</div>
+
+		<div class="karaoke" id="karaoke-lyrics"></div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

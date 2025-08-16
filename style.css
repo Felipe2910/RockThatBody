@@ -1,0 +1,185 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Play", sans-serif;
+	background: #ffffff;
+	background: linear-gradient(45deg, #252525, #000000);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    place-items: center;
+}
+
+.panelsup {
+    background: linear-gradient(0deg, #131313, #000000);
+	color: #fff;
+	position: fixed;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+    padding: .5rem;
+	text-align: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+#artist {
+    color: #bbb;
+}
+#album {
+    color: #aaa;
+}
+
+#bar-container {
+	width: 75%;
+	height: .4rem;
+	background: #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+#bar-container:hover {
+    height: .7rem;
+}
+
+#audio-progress {
+	height: 100%;
+	width: 0%;
+	background: oklch(62.7% 0.194 149.214); /* Azul, cámbialo si quieres */
+	border-radius: 5px;
+	transition: width 0.2s linear;
+}
+
+#time {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    padding: 0 .5rem;
+}
+
+.controls {
+	display: flex;
+	gap: 1rem;
+	padding: .5rem;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px;
+	font-family: "Play", sans-serif;
+	font-size: medium;
+	font-weight: bold;
+	background-color: oklch(62.7% 0.194 149.214);
+	color: #fff;
+    transition: all 0.1s ease-in-out;
+}
+.btn:hover {
+	opacity: 0.5;
+}
+
+.disabled {
+	opacity: 0.5;
+	background-color: oklch(55.4% 0.046 257.417);
+	cursor: not-allowed;
+}
+
+#stop-button {
+	background-color: oklch(57.7% 0.245 27.325);
+}
+#stop-button:hover {
+	background-color: oklch(44.4% 0.177 26.899);
+}
+
+.img {
+	width: 18rem;
+	height: 18rem;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+    overflow: hidden;
+}
+
+.karaoke {
+	display: grid;
+	gap: 5px;
+	padding: 20px;
+	margin-top: 20rem;
+	width: 90%;
+	max-width: 800px;
+	text-align: center;
+}
+
+.lyrics {
+	font-size: 1.5rem;
+	opacity: 0.2;
+	/* Bajo opacidad para las líneas sin resaltar */
+	transition: all 0.5s;
+}
+
+.highlight {
+	color: #09df37;
+    font-size: 2rem;
+	font-weight: bold;
+	opacity: 1;
+	/* Resalto línea activa */
+}
+
+@media (600px <= width <= 1000px) {
+	body {
+		font-size: 18px;
+	}
+	.lyrics {
+		font-size: 1.75rem;
+	}
+	.karaoke {
+		max-width: 800px;
+	}
+}
+@media (360px <= width <= 600px) {
+	body {
+		font-size: 16px;
+	}
+	.panelsup {
+		height: 10rem;
+		grid-template-columns: 1fr;
+		background-image: url("TheBlackEyedPeas_TheEND.jpg");
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-blend-mode: darken;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.lyrics {
+		font-size: 1.5rem;
+	}
+	.karaoke {
+		max-width: 400px;
+	}
+	img {
+		display: none;
+	}
+}
