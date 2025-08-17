@@ -5,6 +5,9 @@
       "artist": "The Black Eyed Peas",
       "album": "The E.N.D.",
       "image": "TheBlackEyedPeas_TheEND.jpg",
+      "backgroundImage": [
+        {"image": "perritos-bailando.gif"}
+      ],
       "song": "Rock That Body_Black Eyed Peas.m4a",
       "song_lyrics": [
         { "lyrics": "I wanna rock right now", "time": "16-17" },
@@ -93,6 +96,63 @@
         { "lyrics": "I wanna, I wanna rock right now", "time": "262-264" },
         { "lyrics": "I wanna, I wanna rock right now", "time": "264-279" }
       ]
+    },
+    {
+      "title": "Tablet (\"From Chainsaw Man\") - Spanish Version",
+      "artist": "André - A!",
+      "album": "Tablet",
+      "image": "TOOBOE-tablet.jpg",
+      "backgroundImage": [
+        {"image": "power-chainsaw-man.gif"},
+        {"image": "power-chainsaw-man1.gif"}
+      ],
+      "song": "tablet_csm4.mp3",
+      "song_lyrics": [
+        { "lyrics": "En una pesquisa criminal, bajo esa luna llena y su esplendor", "time": "13-18" },
+        { "lyrics": "En un rascacielos envuelto en cables, una rubia mira a donde voy", "time": "18-22" },
+        { "lyrics": "Está escondiendo esas manchas que no se irán", "time": "22-26" },
+        { "lyrics": "Ni el llover las quitará", "time": "26-29" },
+        { "lyrics": "Sonríe de oreja a oreja esa venus que al decoro asesinó", "time": "29-34" },
+        { "lyrics": "Para sus ojos regordetes, entre el bien y el mal no hay distinción", "time": "34-39" },
+        { "lyrics": "Demonio locuaz y de la locura, baila muy genial", "time": "39-43" },
+        { "lyrics": "Y bailará hasta el cansancio, ¿no es verdad?", "time": "43-47" },
+        { "lyrics": "De nuevo, me tomo otra", "time": "48-53" },
+        { "lyrics": "De esas tabletas rojas que un olor a sangre expelerán", "time": "53-59" },
+        { "lyrics": "Mientras me caigo, me aferro al amor", "time": "60-62" },
+        { "lyrics": "Pero, a pesar de esta situación, me flota el corazón", "time": "62-64" },
+        { "lyrics": "Impulsivo y ardiente es, pues tu belleza lo enloqueció", "time": "64-68" },
+        { "lyrics": "Ah, la fugaz juventud muy pronto acabará", "time": "69-74" },
+        { "lyrics": "Ah, y yo sentía que apenas iba a empezar", "time": "74-78" },
+        { "lyrics": "Hasta morir, la vida es matar el tiempo, no hay nada más", "time": "88-93" },
+        { "lyrics": "Los fuertes gritos de aquel día, todavía los puedo escuchar", "time": "93-97" },
+        { "lyrics": "Sentía fuego en mi cabeza", "time": "98-99" },
+        { "lyrics": "Arde mi piel", "time": "100-102.5" },
+        { "lyrics": "Perdiendo todas esas cosas que yo siempre amé", "time": "103-106" },
+        { "lyrics": "De noche, aquel disparo siento,", "time": "108-110" },
+        { "lyrics": "Cuando esa bala atravesó mi pecho", "time": "112-114" },
+        { "lyrics": "Me di cuenta de que vivo estoy", "time": "114-118" },
+        { "lyrics": "Por doquier late mi corazón", "time": "118.5-120" },
+        { "lyrics": "No he aprendido mi lección, voy buscando el amor", "time": "121-123" },
+        { "lyrics": "Hasta que pueda conocer al demonio más fenomenal", "time": "123-127" },
+        { "lyrics": "Hey, mi existencia jamás la debes olvidar", "time": "128-132" },
+        { "lyrics": "¿Qué tal si mañana tú y yo vemos películas?", "time": "133-137" },
+        { "lyrics": "Recuérdalo y concéntrate", "time": "138-140" },
+        { "lyrics": "Piensa en que fuerte tú quieres ser", "time": "140-143" },
+        { "lyrics": "Deshagámonos del control", "time": "143-144.5" },
+        { "lyrics": "Vivir libremente", "time": "144-146" },
+        { "lyrics": "Recuérdalo y concéntrate", "time": "147.5-149.5" },
+        { "lyrics": "Piensa en que fuerte tú quieres ser", "time": "149.5-152" },
+        { "lyrics": "Deshagámonos del control", "time": "152-154.2" },
+        { "lyrics": "Vivir libremente", "time": "154-156" },
+        { "lyrics": "Mientras me caigo, me aferro al amor", "time": "158.5-160" },
+        { "lyrics": "Pero, a pesar de esta situación, me flota el corazón", "time": "160-163" },
+        { "lyrics": "Impulsivo y ardiente es, pues tu belleza lo enloqueció", "time": "163-167" },
+        { "lyrics": "Ah, la fugaz juventud muy pronto acabará", "time": "168-172" },
+        { "lyrics": "Ah, y yo sentía que apenas iba a empezar", "time": "173-177" },
+        { "lyrics": "Me encontré deseando que un día alcances al final la felicidad", "time": "178-182" },
+        { "lyrics": "Ah, para siempre así junto a mí quédate", "time": "182-188" }
+      ]
+
     }
   ]
 }
