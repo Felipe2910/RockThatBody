@@ -69,16 +69,16 @@ const karaokeEl = document.getElementById("karaoke");
 ## Screenshots
 
 _Desktop Screenshot 1_
-![Preview1](assets\img\preview0.png)
+![Preview1](/assets/img/preview0.png)
 
 _Desktop Screenshot 2 (con Imagen de Fondo)_
-![Preview2](assets\img\preview1.png)
+![Preview2](/assets/img/preview1.png)
 
 _Desktop Screenshot 3 (con Imagen de Fondo)_
-![Preview3](assets\img\preview2.png)
+![Preview3](/assets/img/preview2.png)
 
 > Mobile Preview Screenshot
-![Preview4](assets\img\preview3.png)
+![Preview4](/assets/img/preview3.png)
 
 ---
 
