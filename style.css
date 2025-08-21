@@ -14,25 +14,31 @@ body {
 }
 
 .panelsup {
-	background: linear-gradient(0deg, #13131370, #000000);
+	background: linear-gradient(180deg, #00000088, #11111149) ;
+	backdrop-filter: blur(5px);
 	color: #fff;
-	filter: drop-shadow(0 4px 2px #000);
 	position: fixed;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
 	top: 0;
 	z-index: 1;
-	width: 100%;
-	padding: 0.5rem;
+	width: 80rem;
+	gap: 1rem;
+	margin: 0.5rem;
+	padding: 1rem;
 	text-align: center;
+	border-radius: 0.5rem;
+	border: 2px solid;
+	border-color: #11111138;
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 1rem;
+}
+.player {
+	display: grid;
+	gap: 1rem;
 }
 .info {
 	display: flex;
@@ -43,18 +49,38 @@ body {
 	padding: 0.5rem;
 }
 
+#title {
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
 #artist {
-	color: #bbb;
+	color: #ccc;
+	font-size: 1.1rem;
 }
 #album {
 	color: #aaa;
 }
 
+.controls {
+	background: linear-gradient(180deg, #00000088, #11111149) ;
+	backdrop-filter: blur(5px);
+	border-radius: 0.5rem;
+	border: 2px solid;
+	border-color: #11111138;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+}
+
 #bar-container {
-	width: 75%;
+	width: 90%;
 	height: 0.4rem;
 	background: #ccc;
 	border-radius: 5px;
+	margin: 0.5rem 0;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
@@ -68,45 +94,59 @@ body {
 #audio-progress {
 	height: 100%;
 	width: 0%;
-	background: oklch(62.7% 0.194 149.214); /* Azul, cámbialo si quieres */
+	background: linear-gradient(to right, #09df98, #00a63e);
 	border-radius: 5px;
 	transition: width 0.2s linear;
+	animation: colorhue 5s ease-in-out infinite;
+}
+@keyframes colorhue {
+	20% {
+		filter: hue-rotate(10deg);
+	}
+	50% {
+		filter: hue-rotate(360deg);
+	}
+	90% {
+		filter: hue-rotate(-10deg);
+	}
 }
 
 #time {
 	display: flex;
-	width: 75%;
+	width: 90%;
 	justify-content: space-between;
 	padding: 0 0.5rem;
 }
 
-.controls {
+.buttons {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-	padding: 0.5rem;
+	padding: 0.2rem;
 }
 
 .btn {
 	cursor: pointer;
-	width: 3rem;
-	height: 3rem;
-	border: 2px solid #ffffff21;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 2px solid;
+	border-color: #ffffff38;
+	outline: none;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(
-		45deg,
-		oklch(63.187% 0.18673 147.227 / 0.623),
-		oklch(63.187% 0.18673 147.227)
-	);
 	color: #fff;
-	filter: drop-shadow(0 0 2px #ffffffbb);
 	transition: all 0.1s ease-in-out;
 }
 .btn:hover {
-	opacity: 0.5;
+	opacity: 0.9;
+	border-color: #111111;
+}
+#play-button,
+#pause-button,
+#modal-button {
+	background: linear-gradient(45deg, #00a63d9f, #00a63d);
 }
 
 #prev-button,
@@ -116,23 +156,20 @@ body {
 		oklch(42.097% 0.2897 264.099 / 0.623),
 		oklch(42.097% 0.2897 264.099)
 	);
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 2rem;
+	height: 2rem;
 }
 
 #stop-button {
-	background: linear-gradient(45deg, oklch(57.7% 0.245 27.325 / 0.623), oklch(57.7% 0.245 27.325));
+	background: #e7000c80;
 }
 #stop-button:hover {
-	background: oklch(44.4% 0.177 26.899);
+	opacity: 0.9;
+	border-color: #111111;
 }
 
 #autoplay-button {
-	background: linear-gradient(
-		45deg,
-		oklch(42.097% 0.2897 264.099 / 0.623),
-		oklch(42.097% 0.2897 264.099)
-	);
+	background: #0004e7;
 	position: fixed;
 	left: 1rem;
 	top: 1rem;
@@ -140,12 +177,13 @@ body {
 }
 
 .img {
-	width: 18rem;
-	height: 18rem;
+	width: 15rem;
+	height: 15rem;
 	border-radius: 0.5rem;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
+	margin: 0 auto;
 }
 
 #background-song-image {
@@ -191,7 +229,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.9);
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	z-index: 999;
@@ -234,57 +272,61 @@ body {
 }
 
 kbd {
-  background: #111;
-  color: #fff;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-family: monospace;
-  text-transform: uppercase;
-  cursor: pointer;
+	background: #111;
+	color: #fff;
+	padding: 0.3rem 0.6rem;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-family: monospace;
+	text-transform: uppercase;
+	cursor: pointer;
 
-  perspective: 200px;
-  display: inline-block;
-  transform: rotateX(5deg);
+	perspective: 200px;
+	display: inline-block;
+	transform: rotateX(5deg);
 
-  border: 1px solid #333;
-  box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.6),
-    inset 0 -3px 6px rgba(255, 255, 255, 0.15),
-    0 0 8px rgba(255, 255, 255, 0.4);
+	border: 1px solid #333;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6), inset 0 -3px 6px rgba(255, 255, 255, 0.15),
+		0 0 8px rgba(255, 255, 255, 0.4);
 
-  transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
 
-  /* Animación con duración variable usando variable CSS */
-  animation: press 1.5s ease-in-out infinite;
-  animation-delay: var(--delay, 0s);
+	/* Animación con duración variable usando variable CSS */
+	animation: press 1.5s ease-in-out infinite;
+	animation-delay: var(--delay, 0s);
 }
 
 /* Alternar el retraso de animación para cada kbd */
-.instruction kbd:nth-child(1) { --delay: 0s; }
-.instruction kbd:nth-child(2) { --delay: 0.2s; }
-.instruction kbd:nth-child(3) { --delay: 0.4s; }
-.instruction kbd:nth-child(4) { --delay: 0.6s; }
-.instruction kbd:nth-child(5) { --delay: 0.8s; }
+.instruction kbd:nth-child(1) {
+	--delay: 0s;
+}
+.instruction kbd:nth-child(2) {
+	--delay: 0.2s;
+}
+.instruction kbd:nth-child(3) {
+	--delay: 0.4s;
+}
+.instruction kbd:nth-child(4) {
+	--delay: 0.6s;
+}
+.instruction kbd:nth-child(5) {
+	--delay: 0.8s;
+}
 /* Puedes continuar escalonando según la cantidad de teclas */
 
 @keyframes press {
-  0%, 100% {
-    transform: rotateX(5deg) translateY(0);
-    box-shadow:
-      0 4px 6px rgba(0,0,0,0.6),
-      inset 0 -3px 6px rgba(255,255,255,0.15),
-      0 0 8px rgba(255,255,255,0.4);
-  }
-  50% {
-    transform: rotateX(2deg) translateY(3px); /* simula presionar */
-    box-shadow:
-      0 2px 3px rgba(0,0,0,0.7),
-      inset 0 2px 4px rgba(255,255,255,0.1),
-      0 0 6px rgba(255,255,255,0.3);
-  }
+	0%,
+	100% {
+		transform: rotateX(5deg) translateY(0);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6), inset 0 -3px 6px rgba(255, 255, 255, 0.15),
+			0 0 8px rgba(255, 255, 255, 0.4);
+	}
+	50% {
+		transform: rotateX(2deg) translateY(3px); /* simula presionar */
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.1),
+			0 0 6px rgba(255, 255, 255, 0.3);
+	}
 }
-
 
 .tutorial-img {
 	width: 3rem;
@@ -303,7 +345,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background: linear-gradient(0deg, #000000, #13131370);
+	background: linear-gradient(0deg, #000000, #7a7a7a00);
 	color: #fff;
 	text-align: center;
 	padding: 0.5rem;
@@ -318,7 +360,7 @@ a:hover {
 
 .disabled {
 	opacity: 0.5;
-	background: oklch(55.4% 0.046 257.417);
+	background: #8a8a8a;
 }
 
 .hidden {
@@ -342,12 +384,6 @@ a:hover {
 	.panelsup {
 		height: 10rem;
 		grid-template-columns: 1fr;
-		background-image: url("TheBlackEyedPeas_TheEND.jpg");
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-blend-mode: darken;
-		background-color: rgba(0, 0, 0, 0.5);
 	}
 	.lyrics {
 		font-size: 1.5rem;

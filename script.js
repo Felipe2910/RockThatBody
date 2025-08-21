@@ -143,9 +143,6 @@ document.addEventListener("keydown", (e) => {
 		ocultarModal();
 	}
 });
-document.addEventListener("click", () => {
-	ocultarModal();
-});
 function ocultarModal() {
 	modal.classList.add("hidden");
 	btnAudio.currentTime = 0;
